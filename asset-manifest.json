@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/test_task_kinopoisk/static/css/main.c8dbf2f2.css",
+    "main.js": "/test_task_kinopoisk/static/js/main.1d385f0e.js",
+    "static/js/787.222b9f69.chunk.js": "/test_task_kinopoisk/static/js/787.222b9f69.chunk.js",
+    "index.html": "/test_task_kinopoisk/index.html",
+    "main.c8dbf2f2.css.map": "/test_task_kinopoisk/static/css/main.c8dbf2f2.css.map",
+    "main.1d385f0e.js.map": "/test_task_kinopoisk/static/js/main.1d385f0e.js.map",
+    "787.222b9f69.chunk.js.map": "/test_task_kinopoisk/static/js/787.222b9f69.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8dbf2f2.css",
+    "static/js/main.1d385f0e.js"
+  ]
+}
