@@ -41,7 +41,7 @@ const useFetch = (url, params) => {
         return () => {
             cancelled = true;
         };
-    }, [url]);
+    }, [url, params]);
 
     return [data, isLoading, error];
 };
