@@ -52,3 +52,4 @@ const GenresCountries = ({ par1, par2 }) => {
 };
 
 export default GenresCountries;
+
