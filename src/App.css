@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+    margin: 1vw;
+    padding: 1vw;
+    display: inline-block;
+    border: 2px solid rgb(125, 130, 131);
+    border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: darkslategrey;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-list {
+    list-style: none;
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-list li {
+    margin-right: 2vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.mobile-menu-button {
+    display: none;
+    cursor: pointer;
+}
+
+.routes-container {
+    padding: 2vw; 
+    background-color: whitesmoke;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input {
+    font: inherit;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    font: inherit;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #fff;
+    background: darkslategrey;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.movies-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.movie-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2vw;
+    margin: 2vw;
+    max-width: 40vw;
+}
+
+.collection {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-container {
+    margin-bottom: 10px;
+
+    > select {
+        font: inherit;
+        font-size: 0.8rem;
+        max-width: 40vw;
+        padding: 0.5vw;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    > label {
+        font: inherit;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    > button {
+        margin-left: 1vw;
+    }
+}
+
+.collection-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item-card {
+    max-width: 50vw;
+    min-height: 15dvh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 1vw;
+    margin: 1vw;
+    border-radius: 8px;
+    background-color: #E0EEE0;
+
+    > h3 {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        display: flex;
+        justify-content: space-between;
+
+        > .name {
+            max-width: 60%;
+        }
+
+        > .rating {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: green;
+        }
+    }
+
+    > .item-info {
+        display: flex;
+        justify-content: space-between;
+
+        > div .type {
+            font-style: italic;
+        }
+        > div ul {
+            list-style-type: none;
+            padding: 0;
+            
+            > li {
+                margin-left: 3vw;
+            } 
+        }
+        > img {
+            max-width: 25%;
+            margin-right: 10px;
+            right: 0;
+            bottom: 2dvh;
+            border-radius: 8px;
+        }
+    }
+    
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        margin: 2vw;
+        padding: 2vw;
+        width: auto;
+    }
+
+    .mobile-menu-button {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list.mobile {
+        display: flex;
+    }
+
+    .routes-container {
+        padding: 1vw; 
+    }
+
+    .content {
+        padding: 2vw;
+    }
+
+    .input {
+        width: 60vw;
+    }
+
+    .movie-card {
+        max-width: 90vw;
+    }
+
+    .btn {
+        width: 20vw;
+        font-size: 3vw;
+    }
+
+    .item-card {
+        max-width: 90vw;
+
+        > h3 {
+            margin-top: 0;
+        }
+    }
+
+    .item-card .item-info img {
+        max-height: 15dvh;
+    }
 }
